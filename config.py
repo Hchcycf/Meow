@@ -18,14 +18,14 @@ if os.path.exists(".env"):
     load_dotenv(".env")
 
 # Necessary Vars
-API_ID = int(os.getenv("API_ID"))
-API_HASH = os.getenv("API_HASH")
-SESSION = os.getenv("SESSION")
+API_ID = int(os.getenv("API_ID", "11822563"))
+API_HASH = os.getenv("API_HASH", "12bfd8057541544a482312319d7fe4ae")
+SESSION = os.getenv("SESSION", "BAB3G-aJDgUBS69mGHlLqd2xCxeYM_iLl80eE_JhfKsPF2wzKKqVYK62_G-w4sMT5KGrzDQ4UP0FDNIXcZ2kWpoZaYU94zKYpnFrr-GBktCC2UUWspzLOO23X4zjW9XerJRVrwInNWNH1X61uDWxA7gtK6qgRjLCyc4qOGvWuUFwdP2g_Tx-Jcdkv1xdzaxQwSacO8OXZ3qUoSAH1kX0M7ToxW-v_6b3Y763kewfIuOlNgBbfYltvyXMaWKVdm9wIsv1hMbvB0hrLuRTQUn83iOzcFNEd0Mb5YQjZ4NJTeQjqbnpf6C0ALKI_R-eVnWaLmDXMxaGPCGmvDsvfl9I495vAAAAAUr8w8oA")
 HNDLR = os.getenv("HNDLR", ".")
-SUDO_USERS = list(map(int, os.getenv("SUDO_USERS").split()))
-ALIVE_PIC = os.getenv("ALIVE_PIC", "")
-ALIVE_MSG = os.getenv("ALIVE_MSG", "")
-PING_MSG = os.getenv("PING_MSG", "")
+SUDO_USERS = list(map(int, os.getenv("SUDO_USERS", "5553046474").split()))
+ALIVE_PIC = os.getenv("ALIVE_PIC", "https://telegra.ph/file/5c8fda9e1fbc5cbb7b881.jpg")
+ALIVE_MSG = os.getenv("ALIVE_MSG", "https://telegra.ph/file/5c8fda9e1fbc5cbb7b881.jpg")
+PING_MSG = os.getenv("PING_MSG", "https://telegra.ph/file/5c8fda9e1fbc5cbb7b881.jpg")
 LOGS_CHANNEL = os.getenv("LOGS_CHANNEL", None)
 
 contact_filter = filters.create(
